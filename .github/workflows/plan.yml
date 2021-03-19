@@ -27,4 +27,5 @@ jobs:
       - name: Terraform Show
         run: |
           terraform show -json tfplan | iconv -t utf-8 > tfplan.json
+          cat tfplan.json
           jq . tfplan.json
