@@ -25,4 +25,4 @@ jobs:
       - name: Terraform Plan
         run: terraform plan -out=tfplan
       - name: Terraform Show
-        run: terraform show -json tfplan | jq -R .
+        run: terraform show -json tfplan | jq -r .
