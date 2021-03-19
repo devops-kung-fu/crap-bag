@@ -8,3 +8,5 @@ Vulnerable and Generally Bad Infrastructure-as-Code
 ## Terraform
 
 ### s3
+
+| Policy | Description |
