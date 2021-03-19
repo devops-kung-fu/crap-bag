@@ -26,6 +26,6 @@ jobs:
         run: terraform plan -out=tfplan
       - name: Terraform Show
         run: |
-          terraform show -json tfplan > tfplan.json
+          terraform show -json tfplan >> tfplan.json
       - name: JSON
         run: jq . tfplan.json
