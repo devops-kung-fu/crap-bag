@@ -25,4 +25,6 @@ jobs:
       - name: Terraform Plan
         run: terraform plan -out=tfplan
       - name: Terraform Show
-        run: jq -r <<< echo "$(terraform show -json tfplan)"
+        run: |
+          terraform show -json tfplan > tfplan.json
+          jq -Rr . tfplan.json
