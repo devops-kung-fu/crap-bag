@@ -2,6 +2,9 @@ name: Terraform Plan
 on: workflow_dispatch
 env:
   TF_VERSION: 0.14
+defaults:
+  run:
+    working-directory: terraform
 jobs:
   terraform:
     name: Plan
