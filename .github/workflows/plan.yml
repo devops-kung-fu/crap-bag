@@ -27,4 +27,4 @@ jobs:
       - name: Terraform Show
         run: |
           echo "$(terraform show -json tfplan)" > tfplan.json
-          jq . tfplan.json
+          jq . < tfplan.json
