@@ -11,4 +11,4 @@ Vulnerable and Generally Bad Infrastructure-as-Code
 
 | Policy | Description |
 | ------ | ----------- |
-
+| DOMI-0001 | No tags founds. |
