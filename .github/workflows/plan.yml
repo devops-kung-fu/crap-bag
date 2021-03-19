@@ -26,4 +26,4 @@ jobs:
         run: terraform plan -out=tfplan
       - name: Terraform Show
         run: |
-          terraform show -json tfplan | sed 's/\_//g' | jq .
+          terraform show -json tfplan | sed 's/\_//g' 2>/dev/null | jq .
