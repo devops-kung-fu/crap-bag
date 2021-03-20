@@ -20,5 +20,6 @@ Vulnerable and Generally Bad Infrastructure-as-Code
 
 | Policy | Description |
 | ------ | ----------- |
-| DOMI-AWS-004 | S3 Versioning is not enabled. |
+| DOMI-AWS-004 | Versioning is not enabled. |
+| DOMI-AWS-005 | Server-side encryption not configured. |
 
