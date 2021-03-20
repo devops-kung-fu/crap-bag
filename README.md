@@ -22,4 +22,5 @@ Vulnerable and Generally Bad Infrastructure-as-Code
 | ------ | ----- | ----------- |
 | DOMI-AWS-004 | Deny | Versioning is not enabled. |
 | DOMI-AWS-005 | Deny | Server-side encryption not configured. |
+|
 
