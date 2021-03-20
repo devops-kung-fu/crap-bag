@@ -12,4 +12,4 @@ Vulnerable and Generally Bad Infrastructure-as-Code
 | Policy | Description |
 | ------ | ----------- |
 | DOMI-0001 | No tags founds. |
-| DOMI-0002 |
+| DOMI-0002 | Empty tags block. |
