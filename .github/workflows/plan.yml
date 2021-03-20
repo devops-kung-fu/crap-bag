@@ -25,6 +25,4 @@ jobs:
       - name: Terraform Plan
         run: terraform plan -out=tfplan
       - name: Terraform Show
-        run: |
-          terraform show -json tfplan > tfplan.json
-          jq . <<< echo "$(cat tfplan.json | iconv -t utf-8)"
+        run: terraform show -json tfplan
