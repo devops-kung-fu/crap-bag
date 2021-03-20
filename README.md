@@ -7,10 +7,16 @@ Vulnerable and Generally Bad Infrastructure-as-Code
 
 ## Terraform
 
+### terraform backend
+
+| Policy | Description |
+| ------ | ----------- |
+| DOMI-AWS-003 | Terraform backend encryption is set to false. |
+
 ### s3
 
 | Policy | Description |
 | ------ | ----------- |
-| DOMI-0001 | No tags founds. |
-| DOMI-0002 | Empty tags block. |
+| DOMI-AWS-001 | No tags founds. |
+| DOMI-AWS-002 | Empty tags block. |
 |
