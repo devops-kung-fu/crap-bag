@@ -10,9 +10,11 @@ resource "aws_s3_bucket" "empty_tags" {
 
 resource "aws_s3_bucket" "versioning_false" {
   bucket = "versioning-false"
-  tags = {}
   versioning {
-      enabled = false
+    enabled = false
+  }
+  tags = {
+    Name = "versioning-false"
   }
 }
 

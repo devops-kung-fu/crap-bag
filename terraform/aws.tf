@@ -1,7 +1,4 @@
 terraform {
-  backend "s3" {
-      encrypt = false
-  }
   required_providers {
     aws = {
       source  = "hashicorp/aws"
