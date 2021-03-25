@@ -22,14 +22,14 @@ resource "aws_s3_bucket" "versioning_empty" {
   bucket = "versioning-empty"
   versioning {}
   tags = {
-    Name = "versioning-false"
+    Name = "versioning-empty"
   }
 }
 
 resource "aws_s3_bucket" "versioning_missing" {
   bucket = "versioning-missing"
   tags = {
-    Name = "versioning-false"
+    Name = "versioning-missing"
   }
 }
 
