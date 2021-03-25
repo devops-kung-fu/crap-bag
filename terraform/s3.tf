@@ -5,6 +5,9 @@ resource "aws_s3_bucket" "no_tags" {
 
 resource "aws_s3_bucket" "empty_tags" {
   bucket = "empty-tags"
+  versioning {
+    enabled = true
+  }
   tags = {}
 }
 
