@@ -82,7 +82,7 @@ resource "aws_s3_bucket" "versioning_missing" {
 resource "aws_s3_bucket" "server_side_encryption_missing" {
   bucket = "server-side-encryption-missing"
   versioning {
-    enabled = false
+    enabled = true
   }
   tags = {
     Name = "server-side-encryption-missing"
