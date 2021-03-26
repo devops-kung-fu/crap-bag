@@ -21,4 +21,4 @@ Vulnerable and Generally Bad Infrastructure-as-Code
 | DOMI-AWS-001 | Warn | S3 - No tags founds. |
 | DOMI-AWS-002 | Warn | S3 - Empty tags block. |
 | DOMI-AWS-004 | Deny | S3 - Versioning is not enabled. |
-| DOMI-AWS-005 | Deny | S3 - Server-side 
+| DOMI-AWS-005 | Deny | S3 - Server 
