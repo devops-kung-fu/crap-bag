@@ -1,4 +1,3 @@
-// DOMI-0001
 resource "aws_s3_bucket" "no_tags" {
   bucket = "no-tags"
   versioning {
