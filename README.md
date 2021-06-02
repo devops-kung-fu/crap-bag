@@ -1,4 +1,5 @@
-# crap-bag
+# Terrafail
+
 Vulnerable and Generally Bad Infrastructure-as-Code
 
 ![crapbag](crapbag.gif)
