@@ -2,15 +2,12 @@
 
 Vulnerable and Generally Bad Infrastructure-as-Code
 
-![crapbag](crapbag.gif)
+# Configuration Directories
 
-- [Terraform](#terraform)
+## domi-aws-003
 
-## Terraform
+Specifically tests if Terraform S3 backend encryption is set to false.
 
-### s3
+## domi-aws-004
 
-| Policy | Description |
-| ------ | ----------- |
-| DOMI-0001 | No tags founds. |
-| DOMI-0002 | Empty tags block. |
+## terraform
