@@ -1,5 +1,9 @@
 resource "aws_s3_bucket" "no_tags" {
   bucket = "no-tags"
+  logging {
+    target_bucket = "access-log-bucket"
+    target_prefix = "log/"
+  }
   versioning {
     enabled = true
   }
@@ -15,6 +19,10 @@ resource "aws_s3_bucket" "no_tags" {
 
 resource "aws_s3_bucket" "empty_tags" {
   bucket = "empty-tags"
+  logging {
+    target_bucket = "access-log-bucket"
+    target_prefix = "log/"
+  }
   versioning {
     enabled = true
   }
@@ -31,6 +39,10 @@ resource "aws_s3_bucket" "empty_tags" {
 
 resource "aws_s3_bucket" "versioning_false" {
   bucket = "versioning-false"
+  logging {
+    target_bucket = "access-log-bucket"
+    target_prefix = "log/"
+  }
   versioning {
     enabled = false
   }
@@ -49,6 +61,10 @@ resource "aws_s3_bucket" "versioning_false" {
 
 resource "aws_s3_bucket" "versioning_empty" {
   bucket = "versioning-empty"
+  logging {
+    target_bucket = "access-log-bucket"
+    target_prefix = "log/"
+  }
   versioning {}
   server_side_encryption_configuration {
     rule {
@@ -65,6 +81,10 @@ resource "aws_s3_bucket" "versioning_empty" {
 
 resource "aws_s3_bucket" "versioning_missing" {
   bucket = "versioning-missing"
+  logging {
+    target_bucket = "access-log-bucket"
+    target_prefix = "log/"
+  }
   server_side_encryption_configuration {
     rule {
       apply_server_side_encryption_by_default {
@@ -80,6 +100,10 @@ resource "aws_s3_bucket" "versioning_missing" {
 
 resource "aws_s3_bucket" "server_side_encryption_missing" {
   bucket = "server-side-encryption-missing"
+  logging {
+    target_bucket = "access-log-bucket"
+    target_prefix = "log/"
+  }
   versioning {
     enabled = true
   }
@@ -90,6 +114,10 @@ resource "aws_s3_bucket" "server_side_encryption_missing" {
 
 resource "aws_s3_bucket" "mfa_delete_false" {
   bucket = "mfa-delete-false"
+  logging {
+    target_bucket = "access-log-bucket"
+    target_prefix = "log/"
+  }
   versioning {
     enabled = true
     mfa_delete = false
@@ -104,5 +132,24 @@ resource "aws_s3_bucket" "mfa_delete_false" {
   }
   tags = {
     Name = "mfa-delete-false"
+  }
+}
+
+resource "aws_s3_bucket" "no_access_logging" {
+  bucket = "no-access-logging"
+  versioning {
+    enabled = true
+    mfa_delete = true
+  }
+  server_side_encryption_configuration {
+    rule {
+      apply_server_side_encryption_by_default {
+        kms_master_key_id = aws_kms_key.kms_key.arn
+        sse_algorithm     = "aws:kms"
+      }
+    }
+  }
+  tags = {
+    Name = "no-access-logging"
   }
 }
