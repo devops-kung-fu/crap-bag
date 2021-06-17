@@ -1,0 +1,14 @@
+version: 2.2
+hooks:
+- type: pre-commit
+  actions:
+    - name: "Git Pull (Ensure there are no upstream changes)"
+      exec: git
+      args: ["pull"]
+    - name: Terraform Format
+      exec: terraform
+      args: ["fmt"]
+    - name: "Add all changed files during the pre-commit stage"
+      exec: git
+      args: ["add", "."]
+    
